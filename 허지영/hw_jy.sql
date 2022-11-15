@@ -5,7 +5,6 @@ create table student(
     student_no int primary key, student_name varchar(20) not null, student_grade int not null
 );
 
-
 show tables;
 show columns from student;
 
@@ -33,4 +32,4 @@ show tables;
 insert into sugang(sugang_number, student_no, subject_code) values (1, 201914077, 'B1234'), (2, 201814077, 'C1234'), (3, 201914079, 'A1234');
 SELECT * FROM sugang;
 
-select * from sugang join student s on sugang.student_no = s.student_no;
+select * from sugang su join student s on s.student_no = su.student_no join subject sub on su.subject_code = sub.subject_code;
